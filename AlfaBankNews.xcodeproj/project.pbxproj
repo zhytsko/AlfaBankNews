@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E17A1EBA749808041FAF09 /* Pods_AlfaBankNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC605A88A1F0BBDEE4DBACA /* Pods_AlfaBankNews.framework */; };
 		2E75F7A522C502CE0036A0E2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7A422C502CE0036A0E2 /* MainTabBarController.swift */; };
 		2E75F7A922C5035D0036A0E2 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7A822C5035D0036A0E2 /* ListViewController.swift */; };
 		2E75F7AC22C503C90036A0E2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7AB22C503C90036A0E2 /* FavoriteViewController.swift */; };
 		2E75F7AE22C508E00036A0E2 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7AD22C508E00036A0E2 /* ListTableViewCell.swift */; };
 		2E75F7B322C5095A0036A0E2 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7B222C5095A0036A0E2 /* UIView+Additions.swift */; };
 		2E75F7B522C50E0A0036A0E2 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F7B422C50E0A0036A0E2 /* FavoriteTableViewCell.swift */; };
+		2EE362B322C618380077A143 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE362B222C618380077A143 /* ListModel.swift */; };
+		2EE362B522C618720077A143 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE362B422C618720077A143 /* News.swift */; };
+		2EE362B722C619890077A143 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE362B622C619890077A143 /* ListViewModel.swift */; };
+		2EE362BB22C622D00077A143 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE362BA22C622D00077A143 /* NetworkManager.swift */; };
 		2EF1EA8622C5014B001ACA73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1EA8522C5014B001ACA73 /* AppDelegate.swift */; };
 		2EF1EA8D22C5014D001ACA73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF1EA8C22C5014D001ACA73 /* Assets.xcassets */; };
 		2EF1EA9022C5014D001ACA73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF1EA8E22C5014D001ACA73 /* LaunchScreen.storyboard */; };
@@ -25,11 +30,18 @@
 		2E75F7AD22C508E00036A0E2 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		2E75F7B222C5095A0036A0E2 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		2E75F7B422C50E0A0036A0E2 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		2EE362B222C618380077A143 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		2EE362B422C618720077A143 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		2EE362B622C619890077A143 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		2EE362BA22C622D00077A143 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2EF1EA8222C5014B001ACA73 /* AlfaBankNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlfaBankNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF1EA8522C5014B001ACA73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EF1EA8C22C5014D001ACA73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EF1EA8F22C5014D001ACA73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EF1EA9122C5014D001ACA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AC605A88A1F0BBDEE4DBACA /* Pods_AlfaBankNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfaBankNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		476BC60777F1569F5BC93109 /* Pods-AlfaBankNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaBankNews.debug.xcconfig"; path = "Target Support Files/Pods-AlfaBankNews/Pods-AlfaBankNews.debug.xcconfig"; sourceTree = "<group>"; };
+		B95AAC4151A85A314587C275 /* Pods-AlfaBankNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfaBankNews.release.xcconfig"; path = "Target Support Files/Pods-AlfaBankNews/Pods-AlfaBankNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12E17A1EBA749808041FAF09 /* Pods_AlfaBankNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +61,7 @@
 			children = (
 				2E75F7A422C502CE0036A0E2 /* MainTabBarController.swift */,
 				2EF1EA8522C5014B001ACA73 /* AppDelegate.swift */,
+				2EE362B422C618720077A143 /* News.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -57,6 +71,8 @@
 			children = (
 				2E75F7A822C5035D0036A0E2 /* ListViewController.swift */,
 				2E75F7AD22C508E00036A0E2 /* ListTableViewCell.swift */,
+				2EE362B222C618380077A143 /* ListModel.swift */,
+				2EE362B622C619890077A143 /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -78,11 +94,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2EE362B822C622A40077A143 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2EE362BA22C622D00077A143 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		2EF1EA7922C5014B001ACA73 = {
 			isa = PBXGroup;
 			children = (
 				2EF1EA8422C5014B001ACA73 /* AlfaBankNews */,
 				2EF1EA8322C5014B001ACA73 /* Products */,
+				F2DCD762CD8B4F984E485F3B /* Pods */,
+				4A3706303B05EAD7514E6849 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +123,7 @@
 		2EF1EA8422C5014B001ACA73 /* AlfaBankNews */ = {
 			isa = PBXGroup;
 			children = (
+				2EE362B822C622A40077A143 /* Networking */,
 				2E75F7A622C503270036A0E2 /* Main */,
 				2E75F7A722C5034D0036A0E2 /* List */,
 				2E75F7AA22C503B60036A0E2 /* Favorite */,
@@ -108,6 +135,23 @@
 			path = AlfaBankNews;
 			sourceTree = "<group>";
 		};
+		4A3706303B05EAD7514E6849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AC605A88A1F0BBDEE4DBACA /* Pods_AlfaBankNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2DCD762CD8B4F984E485F3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				476BC60777F1569F5BC93109 /* Pods-AlfaBankNews.debug.xcconfig */,
+				B95AAC4151A85A314587C275 /* Pods-AlfaBankNews.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EF1EA9422C5014D001ACA73 /* Build configuration list for PBXNativeTarget "AlfaBankNews" */;
 			buildPhases = (
+				3CDF5DAE865590ECFE8DFBA3 /* [CP] Check Pods Manifest.lock */,
 				2EF1EA7E22C5014B001ACA73 /* Sources */,
 				2EF1EA7F22C5014B001ACA73 /* Frameworks */,
 				2EF1EA8022C5014B001ACA73 /* Resources */,
+				BAD555CD6F0EE8DB8F45D2EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,18 +219,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CDF5DAE865590ECFE8DFBA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlfaBankNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAD555CD6F0EE8DB8F45D2EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaBankNews/Pods-AlfaBankNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfaBankNews/Pods-AlfaBankNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfaBankNews/Pods-AlfaBankNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EF1EA7E22C5014B001ACA73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE362B722C619890077A143 /* ListViewModel.swift in Sources */,
 				2E75F7B322C5095A0036A0E2 /* UIView+Additions.swift in Sources */,
 				2EF1EA8622C5014B001ACA73 /* AppDelegate.swift in Sources */,
 				2E75F7A922C5035D0036A0E2 /* ListViewController.swift in Sources */,
+				2EE362BB22C622D00077A143 /* NetworkManager.swift in Sources */,
+				2EE362B522C618720077A143 /* News.swift in Sources */,
 				2E75F7A522C502CE0036A0E2 /* MainTabBarController.swift in Sources */,
 				2E75F7AC22C503C90036A0E2 /* FavoriteViewController.swift in Sources */,
 				2E75F7B522C50E0A0036A0E2 /* FavoriteTableViewCell.swift in Sources */,
 				2E75F7AE22C508E00036A0E2 /* ListTableViewCell.swift in Sources */,
+				2EE362B322C618380077A143 /* ListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +412,7 @@
 		};
 		2EF1EA9522C5014D001ACA73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476BC60777F1569F5BC93109 /* Pods-AlfaBankNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +431,7 @@
 		};
 		2EF1EA9622C5014D001ACA73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95AAC4151A85A314587C275 /* Pods-AlfaBankNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

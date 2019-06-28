@@ -2,6 +2,8 @@ import UIKit
 
 class ListViewController: UIViewController {
     
+    let viewModel = ListViewModel()
+    
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
@@ -12,6 +14,9 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        viewModel.setup() {
+            self.refreshData()
+        }
     }
     
     func setupTableView(){
@@ -25,15 +30,22 @@ class ListViewController: UIViewController {
                             bottom: view.bottomAnchor,
                             right: view.rightAnchor)
     }
+    
+    func refreshData() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.model.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        guard var cell = tableView.dequeueReusableCell(withIdentifier: "listID", for: indexPath) as? ListTableViewCell else { return UITableViewCell() }
+        viewModel.update(cell: &cell, indexPath: indexPath)
         return cell
     }
 }
