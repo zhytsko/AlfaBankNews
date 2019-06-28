@@ -12,7 +12,7 @@ struct NetworkManager {
         static let limit = 15
     }
     
-    func loadData(category: Int, complition: @escaping ([News]) -> Void) {
+    func loadData(category: Int, completion: @escaping ([News]) -> Void) {
         let urlString = Config.baseURL + Config.category + "\(category)" + Config.city + Config.cityNumber
         guard let url = URL(string: urlString) else { return }
         Alamofire.request(url, method: .get, parameters: nil).response { response in
@@ -28,7 +28,7 @@ struct NetworkManager {
                     items.append(News(title: title.text, description: description.text, link: link))
                 }
             }
-            complition(items)
+            completion(items)
         }
     }
 }

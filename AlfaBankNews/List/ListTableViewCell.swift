@@ -4,7 +4,7 @@ class ListTableViewCell: UITableViewCell {
     
     let cellView: UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
+        view.backgroundColor = .red
         view.alpha = 0.5
         view.setCellShadow()
         return view
@@ -15,17 +15,9 @@ class ListTableViewCell: UITableViewCell {
         name.text = "Name"
         name.textAlignment = NSTextAlignment.center
         name.font = UIFont(name: name.font.fontName, size: 20)
+        name.numberOfLines = 0
         return name
     }()
-    
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Description"
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    var task: URLSessionTask?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,7 +31,6 @@ class ListTableViewCell: UITableViewCell {
     func setup() {
         addSubview(cellView)
         addSubview(nameLabel)
-        addSubview(descriptionLabel)
         cellView.setAnchor(top: topAnchor,
                            left: leftAnchor,
                            bottom: bottomAnchor,
@@ -52,22 +43,10 @@ class ListTableViewCell: UITableViewCell {
         nameLabel.setAnchor(top: topAnchor,
                             left: leftAnchor,
                             right: rightAnchor,
-                            paddingTop: 5,
-                            paddingLeft: 20,
-                            paddingRight: 20,
-                            height: 20)
+                            paddingLeft: 5,
+                            paddingRight: 5)
         
-        descriptionLabel.setAnchor(top: nameLabel.bottomAnchor,
-                                   left: nameLabel.rightAnchor,
-                                   bottom: nameLabel.bottomAnchor,
-                                   right: nameLabel.rightAnchor,
-                                   paddingLeft: 20,
-                                   paddingBottom: 5,
-                                   paddingRight: 20)
+        nameLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        task?.cancel()
-    }
 }
