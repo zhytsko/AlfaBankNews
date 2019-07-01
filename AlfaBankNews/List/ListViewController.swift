@@ -14,12 +14,13 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupNavBar()
         viewModel.setup() { [weak self] in
             self?.refreshData()
         }
     }
     
-    func setupTableView(){
+    func setupTableView() {
         tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,6 +30,12 @@ class ListViewController: UIViewController {
                             left: view.leftAnchor,
                             bottom: view.bottomAnchor,
                             right: view.rightAnchor)
+    }
+    
+    func setupNavBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.title = "News"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkText, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
     }
     
     func refreshData() {
@@ -54,6 +61,12 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let link = viewModel.getNewsLink(indexPath: indexPath)
+        let newsViewController = NewsViewController(link: link)
+        self.navigationController?.pushViewController(newsViewController, animated: true)
     }
     
 }
