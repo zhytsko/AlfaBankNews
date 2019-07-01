@@ -14,8 +14,8 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.setup() {
-            self.refreshData()
+        viewModel.setup() { [weak self] in
+            self?.refreshData()
         }
     }
     
@@ -32,8 +32,8 @@ class ListViewController: UIViewController {
     }
     
     func refreshData() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 }
