@@ -18,4 +18,8 @@ class ListViewModel {
     func update(cell: inout ListTableViewCell, indexPath: IndexPath) {
         cell.nameLabel.text = self.model.items[indexPath.row].title
     }
+    
+    func getNewsLink(indexPath: IndexPath) -> URL {
+        return model.items[indexPath.row].link
+    }
 }
